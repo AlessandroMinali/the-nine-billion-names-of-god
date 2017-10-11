@@ -1,0 +1,8 @@
+Style/RescueModifier:
+  Enabled: false
+
+Lint/RescueWithoutErrorClass:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 100

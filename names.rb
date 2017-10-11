@@ -13,7 +13,7 @@ God.create(name: '') if God.first.nil?
 # Reveal all 9 billion names of GOD
 class NamesOfGod
   # https://en.wikipedia.org/wiki/Rotokas_alphabet
-  ALPHA = %w[a e g i k o p r s t u v].freeze
+  ALPHA = %w[a e g i k n o p r s t u v].freeze
 
   def call(env)
     if env['REQUEST_METHOD'] == 'GET' && env['REQUEST_PATH'] == '/'
@@ -37,8 +37,8 @@ class NamesOfGod
     return 'a' if name.empty?
     letter_index = ALPHA.index(name[-1]).next
     name_start = name[0...-1]
-    name_start = next_god(name[0...-1]) if letter_index > 11
-    name = name_start + ALPHA[letter_index % 12]
+    name_start = next_god(name[0...-1]) if letter_index > ALPHA.length - 1
+    name = name_start + ALPHA[letter_index % ALPHA.length]
     return next_god(name) if triples?(name)
     name
   end

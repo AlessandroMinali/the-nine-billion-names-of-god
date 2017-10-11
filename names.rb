@@ -1,5 +1,4 @@
 require 'erb'
-require 'sqlite3'
 require 'sequel'
 
 db = Sequel.connect(ENV['DATABASE_URL'] || 'sqlite://names.db')

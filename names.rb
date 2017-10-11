@@ -7,7 +7,7 @@ db.create_table :gods do
   String :name
 end rescue nil
 class God < Sequel::Model; end
-God.create(name: '') if God.first.nil?
+God.create(name: 'aaaaaaaaa') if God.first.nil?
 
 # Reveal all 9 billion names of GOD
 class NamesOfGod
@@ -33,7 +33,7 @@ class NamesOfGod
   private
 
   def next_god(name)
-    return 'a' if name.empty?
+    return name if name.length > 9 || name.empty?
     letter_index = ALPHA.index(name[-1]).next
     name_start = name[0...-1]
     name_start = next_god(name[0...-1]) if letter_index > ALPHA.length - 1

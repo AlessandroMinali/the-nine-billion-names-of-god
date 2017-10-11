@@ -3,8 +3,8 @@ A working example of the `Automatic Sequence Computer Mark V` described in Arthu
 
 Essentially generates ~9 Billion combinations from a 13 letter alphabet (13^9 premutations).
 
-Based on the real world [Rotokas alphabet](https://en.wikipedia.org/wiki/Rotokas_alphabet).
-`a e g i k n o p r s t u v`
+Based on the real world [Rotokas alphabet](https://en.wikipedia.org/wiki/Rotokas_alphabet)
+ `a e g i k [n] o p r s t u v`
 
 ## How
 - Grab current name of GOD
@@ -15,8 +15,8 @@ Based on the real world [Rotokas alphabet](https://en.wikipedia.org/wiki/Rotokas
 
 ## Examples
 ### Next GOD
-Previous: 'AAV'  
-Next: 'AEA'
+Previous: 'AVV'  
+Next: 'EAA'
 
 ### Avoid triples
 Previous: 'GGE'  

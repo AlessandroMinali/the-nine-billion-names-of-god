@@ -21,16 +21,3 @@ Next: 'EAA'
 ### Avoid triples
 Previous: 'GGE'  
 Next: 'GGI'
-
-## Deploy
-Gemfile
-```
-group :production do
-  gem 'pg'
-end
-```
-```
-$ heroku create
-$ heroku addons:create heroku-postgresql:hobby-dev
-$ git push heroku master
-```
